@@ -76,6 +76,13 @@ class TestCredentials(unittest.TestCase):
 
         self.new_credential.save_credential()  # saving the new credential
 
+    # Tear down function
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credential.credential_list = []
+
     
 
     
