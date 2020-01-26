@@ -59,6 +59,22 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credential= Credential(
             "bir", "twitter","bir","bir")  
+    
+    def test_credential_init(self):
+        """
+        Test case to show that credentials are well initialized.
+        """
+        self.assertEqual(self.new_credential.username, "bir")
+        self.assertEqual(self.new_credential.account, "twitter")
+        self.assertEqual(self.new_credential.account_username, "bir")
+        self.assertEqual(self.new_credential.account_password, "bir")
+    
+    def test_save_credential(self):
+        """
+        Test to check the save feature
+        """
+
+        self.new_credential.save_credential()  # saving the new credential
 
     
 
