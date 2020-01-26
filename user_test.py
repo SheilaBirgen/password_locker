@@ -134,6 +134,18 @@ class TestCredentials(unittest.TestCase):
 
         self.assertTrue(credential_exists)
 
+    def test_find_credential_by_account_username(self):
+        self.new_credential.save_credential()
+        test_credential = Credential("test", "twitter","test","test ")
+        test_credential.save_credential()
+        find_credential = Credential.find_by_account_username()
+        self.assertEqual(find_credential.account_password, test_credential.account_password)
+        
+        
+    def test_display_all_credential(self):
+        self.assertEqual(Credential.display_credential(), Credential.credential_list)
+
+    
 
 
 

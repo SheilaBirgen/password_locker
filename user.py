@@ -53,7 +53,7 @@ class Credential:
 
     
     @classmethod
-    def credential_exists(cls, online_account):
+    def credential_exist(cls, online_account):
         '''
         Method that checks if a credential exists from the credential list.
         Args:
@@ -66,3 +66,15 @@ class Credential:
                 return True
 
         return False
+    @classmethod
+    def find_by_account_username(cls, account_username):
+        '''
+        method  that checks if the Account username credential exists
+        '''
+        for credential in cls.credential_list:
+            if credential.account_username == account_username:
+                return credential
+
+    @classmethod
+    def display_all_credentials(cls):
+        return cls.credential_list
