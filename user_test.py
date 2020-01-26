@@ -83,7 +83,7 @@ class TestCredentials(unittest.TestCase):
         '''
         Credential.credential_list = []
 
-    #save multiple credentials
+    #save multiple credential
     def test_save_multiple_credential(self):
         '''
         test_save_multiple_users to check if we can save multiple users
@@ -91,9 +91,21 @@ class TestCredentials(unittest.TestCase):
         '''
         self.new_credential.save_credential()
         trial_credential = Credential(
-            "test", "Facebook", "test", "test")  # new credentials
+            "test", "Facebook", "test", "test")  # new credential
         trial_credential.save_credential()
         self.assertEqual(len(Credential.credential_list), 2)
+
+     # Test to delete Credential
+    def test_delete_credential(self):
+        '''
+        test_delete_credential to test if we can remove a user from our user list
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential(
+            "test", "twitter", "test", "test")  # new user
+        test_credential.save_credential()
+        self.new_credential.delete_credential()  # Deleting a user object
+        self.assertEqual(len(Credential.credential_list), 1)
 
 
 
