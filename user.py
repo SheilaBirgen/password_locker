@@ -43,3 +43,10 @@ class Credential:
         Function for saving credential
         """
         Credential.credential_list.append(self)
+
+    # Delete credential function
+    def delete_credential(self):
+        """
+        Function for saving credential
+        """
+        Credential.credential_list.remove(self)
