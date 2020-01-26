@@ -119,40 +119,31 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(len(Credential.credential_list), 1)
         
         
-        #Test to see if a crential exist
-    def test_credentials_exists(self):
-        '''
-        test to check if we can return a Boolean  if we cannot find the credentials.
-        '''
+    #     #Test to see if a crential exist
+    # def test_credentials_exists(self):
+    #     '''
+    #     test to check if we can return a Boolean  if we cannot find the credentials.
+    #     '''
 
-        self.new_credential.save_credential()
-        test_credential = Credential(
-            "test", "twitter", "test", "test")  # new contact
-        test_credential.save_credential()
+    #     self.new_credential.save_credential()
+    #     test_credential = Credential(
+    #         "test", "twitter", "test", "test")  # new contact
+    #     test_credential.save_credential()
 
-        credential_exists = Credential.credential_exists("test")
+    #     credential_exists = Credential.credential_exists("test")
 
-        self.assertTrue(credential_exists)
+    #     self.assertTrue(credential_exists)
 
-    def test_find_credential_by_account_username(self):
-        self.new_credential.save_credential()
-        test_credential = Credential("test", "twitter","test","test ")
-        test_credential.save_credential()
-        find_credential = Credential.find_by_account_username()
-        self.assertEqual(find_credential.account_password, test_credential.account_password)
+    # def test_find_credential_by_account_username(self):
+    #     self.new_credential.save_credential()
+    #     test_credential = Credential("test", "twitter","test","test ")
+    #     test_credential.save_credential()
+    #     find_credential = Credential.find_by_account_username()
+    #     self.assertEqual(find_credential.account_password, test_credential.account_password)
+
         
-        
-    def test_display_all_credential(self):
-        self.assertEqual(Credential.display_credential(), Credential.credential_list)
-
-    
-
-
-
-    
-
-    
-
+    # def test_display_all_credential(self):
+    #     self.assertEqual(Credential.display_credential(), Credential.credential_list)
 
 if __name__ =='__main__':
     unittest.main()
