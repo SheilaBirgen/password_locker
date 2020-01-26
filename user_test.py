@@ -1,5 +1,5 @@
 import unittest
-from user import User
+from user import User,Credential
 
 class TestUser(unittest.TestCase):
     '''
@@ -48,19 +48,17 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list), 1)
     
-    #test if the user exists
-    def test_user_exists(self):
-        '''
-        test to check if we can return a Boolean  if we cannot find the contact.
-        '''
+class TestCredentials(unittest.TestCase):
+    """
+    Class to test the account credentials
+    """
 
-        self.new_user.save_user()
-        test_user = User("test", "test")  # new contact
-        test_user.save_user()
-
-        user_exists = User.user_exists("test")
-
-        self.assertTrue(user_exists)
+    def setUp(self):
+        """
+        This runs before the tests
+        """
+        self.new_credential= Credential(
+            "bir", "twitter","bir","bir")  
 
     
 
