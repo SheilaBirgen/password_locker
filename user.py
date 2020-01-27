@@ -28,11 +28,11 @@ class Credential:
 
     credential_list = []
 
-    def __init__(self, username, account, account_username, account_password):
+    def __init__(self, account, account_username, account_password):
         """
         Init method for creating new instances of account credentials
         """
-        self.username = username
+        # self.username = username
         self.account = account
         self.account_username = account_username
         self.account_password = account_password
@@ -67,14 +67,16 @@ class Credential:
 
         return False
     @classmethod
-    def find_by_account_username(cls, account_username):
+    def find_credential_by_account_username(cls, account_username):
         '''
         method  that checks if the Account username credential exists
         '''
         for credential in cls.credential_list:
             if credential.account_username == account_username:
                 return credential
-
+    
     @classmethod
-    def display_all_credentials(cls):
+    def display_credential(cls):
         return cls.credential_list
+
+    
