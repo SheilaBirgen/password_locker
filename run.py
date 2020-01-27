@@ -1,6 +1,7 @@
-#!/usr/bin/env python3.6
+#! /usr/bin/env python3.7
+
 from user import User, Credential
-from random import random
+import random
 import string
 import getpass
 
@@ -35,7 +36,7 @@ def create_credential(account, account_username, account_password):
     """
   function create new credential
     """
-    new_credential = create_credential(account, account_username, account_password)
+    new_credential = Credential(account, account_username, account_password)
     return new_credential
 
 
@@ -71,15 +72,40 @@ def display_credential():
     Function to display credential
     """
     return Credential.display_credential()
+    
+def random_password(length=8):
+        """
+        Random password generation
+        """
+        # if uppercase: character_set += string.ascii_uppercase
+        # if numbers: character_set += string.digits
+        # if lowercase: character_set += string.ascii_lowercase
+
+        character_set = string.ascii_letters + string.digits
+        return "".join(random.choice(character_set) for i in range(length))
+        
 
 def main():
     # keyboard = Controller()
     # time.sleep(2)
-    print("Hello, WELCOME to THE PASSWORD LOCKER. What is your name, please :) ?")
-    user_name = input()
+    # global password
+    user_name = input("Enter your name > ")
 
-    print(f"Hello {user_name}. what would you like to do today?")
-    print('\n')
+    print(f"Hello {user_name}, welcome to password locker")
+    print("\n")
+    ask = input(f"Hello {user_name}. Do you have an Account? YES/N0 > ").lower()
+
+    if ask == "no":
+        print("Signup with password locker to have access")
+        user_name = input("Enter your User name > ")
+        create = input(
+            f"Hello {user_name}. Do you want a generated password? YES/N0 > ")
+        if create == "no":
+            print("-"*87)
+            print("|Don't mind if your password is not visible as you type. WE go your password secured.|")#
+            print("-"*87)
+            getpass.getpass()
+            print("YOU ARE NOW LOGGED IN")
 
     while True:
         print(
@@ -88,7 +114,7 @@ def main():
                     1. cc - to create a new credential
                     2. dc - to display credential
                     3. fc - to find credential
-                    4. dc - to delete credential
+                    4. dl - to delete credential
                     5. gp - to generate a random password
                     6. ex- to exit 
             ''')
@@ -118,21 +144,9 @@ def main():
             print(
                 "Please enter the account you want to generate password for > ")
             social_media = input("Enter account type > ")
-
-            def random_password(length=8, uppercase=True, lowercase=True, numbers=True):
-                """
-                Random password generation
-                """
-                character_set = ''
-                if uppercase: character_set += string.ascii_uppercase
-                if numbers: character_set += string.digits
-                if lowercase: character_set += string.ascii_lowercase
-
-                character_set = string.ascii_letters + string.digits
-                return "".join(random.choice(character_set) for i in range(length))
-
-            print(
-               f"Your random password for {social_media} is: ", random_password(8))
+            print(social_media)
+            p = random_password()
+            print(p)
 
         elif short_code == "dc":
 
