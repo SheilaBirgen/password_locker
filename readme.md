@@ -6,6 +6,9 @@ Sheila Birgen Jerono
 ## Technologies Used
 Python
 
+## Screenshot
+!Screenshot(image/pic.png)
+
 ## Installation
 The project can be cloned from github to your local machine by using the command git clone followed by this link https://github.com/SheilaBirgen/password_locker.git or by directly downloading and unzipping the file.
 There is no live link to this project
