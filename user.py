@@ -79,4 +79,8 @@ class Credential:
     def display_credential(cls):
         return cls.credential_list
 
+    @classmethod
+    def display_all_credentials(cls):
+        return cls.credential_list
+
     

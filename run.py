@@ -88,7 +88,7 @@ def main():
                     1. cc - to create a new credential
                     2. dc - to display credential
                     3. fc - to find credential
-                    4. dl - to delete credential
+                    4. dc - to delete credential
                     5. gp - to generate a random password
                     6. ex- to exit 
             ''')
@@ -132,7 +132,7 @@ def main():
                 return "".join(random.choice(character_set) for i in range(length))
 
             print(
-                f"Your random password for {social_media} is: ", random_password(8))
+               f"Your random password for {social_media} is: ", random_password(8))
 
         elif short_code == "dc":
 

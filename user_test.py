@@ -140,14 +140,14 @@ class TestCredentials(unittest.TestCase):
         test_credential = Credential("account","account_username", "account_password")
         test_credential.save_credential()
         find_credential = Credential.find_credential_by_account_username()
-        self.assertEqual(find_credential.account_password, test_credential.account_password)
+        self.assertEqual(find_credential.account_username, test_credential.account_username)
 
         
     def test_display_credential(self):
         self.assertEqual(Credential.display_credential(), Credential.credential_list)
+    
+    def test_display_all_credentials(self):
+        self.assertEqual(Credential.display_all_credentials(), Credential.credential_list)
 
 if __name__ =='__main__':
     unittest.main()
-    
-
-    
