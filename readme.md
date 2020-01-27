@@ -6,6 +6,10 @@ Sheila Birgen Jerono
 ## Technologies Used
 Python
 
+## Installation
+The project can be cloned from github to your local machine by using the command git clone followed by this link https://github.com/SheilaBirgen/password_locker.git or by directly downloading and unzipping the file.
+There is no live link to this project
+
 ## Description
 Password locker is an app that enables a user to enter their username and password and the password can also be genarated randomly by the app.it also enables one to delete an account,view all the accounts,find a certain credential and also create a new one.
 ## BDD
@@ -17,10 +21,12 @@ Password locker is an app that enables a user to enter their username and passwo
 ## Known Bugs
 There are no known bugs at the moment
 
+## Support and contact details
+
+For any comment question or feedback reach me through this email jeronobergen@gmail.com or on github as SheilaBirgen
 
 
-
-## Licence
+## License
 
 MIT License
 
