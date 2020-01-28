@@ -33,8 +33,8 @@ For any comment question or feedback reach me through this email jeronobergen@gm
 
 
 ## License
-
-MIT License
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+<!-- MIT License
 
 Copyright (c) 2020 SheilaBirgen
 
@@ -55,4 +55,4 @@ FITNESS FOR A PAR| User can search for specific stories | Input a keyword on the
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE. -->
