@@ -184,9 +184,9 @@ def main():
             Credential.credential_list.remove(my_del)
             print( 
                 f"Credential with  account username {my_delete} has been removed succefully")
-        elif short_code == "ex":
-            print("Logged out")
-            break
+        # elif short_code == "ex":
+        #     print("Logged out.Have a great day")
+        #     break
 
         elif short_code == "ex":
             print(f"Thanks for visiting us. Have a great day {user_name}")
