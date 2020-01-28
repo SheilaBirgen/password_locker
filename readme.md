@@ -22,7 +22,7 @@ Password locker is an app that enables a user to enter their username and passwo
 | User can view all the accounts he/she has |user selects display credentials| Credentials are viewed|
 
 ## CodeBeat Badge
-[![codebeat badge](https://codebeat.co/badges/fc630111-6f56-41cb-8541-5bba03678e51)](https://codebeat.co/projects/github-com-sheilabirgen-password_locker-master)
+[![codebeat badge](https://codebeat.co/badges/62815a38-a4e1-44db-81b1-a98fe8b5ab8a)](https://codebeat.co/projects/github-com-sheilabirgen-password_locker-feature)
 
 ## Known Bugs
 There are no known bugs at the moment
