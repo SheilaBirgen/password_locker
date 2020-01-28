@@ -182,7 +182,7 @@ def main():
             my_delete = input("> ")
             my_del = find_credential(my_delete)
             Credential.credential_list.remove(my_del)
-            print(
+            print( 
                 f"Credential with  account username {my_delete} has been removed succefully")
         elif short_code == "ex":
             print("Logged out")

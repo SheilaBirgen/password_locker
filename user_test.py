@@ -139,7 +139,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credential()
         test_credential = Credential("account","account_username", "account_password")
         test_credential.save_credential()
-        find_credential = Credential.find_credential_by_account_username()
+        find_credential = Credential.find_credential_by_account_username("")
         self.assertEqual(find_credential.account_username, test_credential.account_username)
 
         
